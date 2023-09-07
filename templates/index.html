@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>HOSTECH</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form id="login-form">
+                <h1>Sign In</h1>
+                <input type="text" placeholder="Username" id="Username" required />
+                <input type="text" placeholder="Room_number" id="room_number" required />
+                <input type="password" placeholder="Password" id="password" required />
+                <a href="#">Forgot your password?</a>
+                <button >Sign In</button>
+                <p>Don't have an account? <a href="signup.html" class="col">Sign Up</a></p>
+            </form>
+           
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome To HosTech</h1>
+                    <p>Enter your personal details and start the journey with us</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            // Get the entered username, room number, and password
+            const username = document.getElementById("Username").value;
+            const roomNumber = document.getElementById("room_number").value;
+            const password = document.getElementById("password").value;
+    
+            // Check if the entered credentials are correct
+            if (roomNumber === "HTU23" && password === "12345") {
+                // Store user information in local storage (you can use a more secure method for production)
+                localStorage.setItem("user", JSON.stringify({ name: username }));
+    
+                // Redirect to the homepage
+                window.location.href = "homepage.html";
+            } else {
+                // Display an error message
+                alert("Invalid credentials. Please try again.");
+            }
+        });
+    </script>
+    
+    
+<footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="#">TEAM RADIEN   HTU  </a>
+		<a target="_blank" href="#">(c) Global Code Camp 2023</a>.
+	</p>
+</footer>
+</body>
+</html>
