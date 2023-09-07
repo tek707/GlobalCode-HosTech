@@ -3,8 +3,8 @@ import time
 from gpiozero import LED
 from gpiozero import MotionSensor
 
-yellowled = LED(20)
-pir = MotionSensor(26)
+yellowled = LED(26)
+pir = MotionSensor(20)
 yellowled.off()
 
 while True:
