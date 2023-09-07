@@ -57,7 +57,22 @@ def distance():
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/about.html')
+def aboutus():
+    return render_template('about.html')
+
+
+@app.route('/services.html')
+def services():
     return render_template('services.html')
+
+@app.route('/homepage.html')
+def homepage():
+    return render_template('homepage.html')
+
+
 
 @app.post('/door/on')
 def door_open():
@@ -77,35 +92,38 @@ def door_open():
             
         time.sleep(1)
             
-        return redirect("/")
+        return redirect("/services.html")
 
 @app.post('/door/off')
 def door_offline():
     ledgreen.on()
-    return redirect("/")
+    return redirect("/services.html")
 
 @app.post('/motionsensor/on')
 def motionsensor_on():
     pir.wait_for_motion()
     yellowled.on()
-    return redirect("/")
+    return redirect("/services.html")
 
 @app.post('/motionsensor/off')
 def motionsensor_off():
     pir.wait_for_no_motion()
     yellowled.off()
-    return redirect("/")
+    return redirect("/services.html")
+
 
 @app.post('/light/on')
 def light_on():
    
     yellowled.on()
-    return redirect("/")
+    return redirect("/services.html")
+
 
 @app.post('/light/off')
 def light_off():
    
     yellowled.off()
-    return redirect("/")
+    return redirect("/services.html")
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

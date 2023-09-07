@@ -5,6 +5,8 @@
     <title>HOSTECH</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
     <link href="/static/css/style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <body>
 <nav>
@@ -17,184 +19,74 @@
         <li><a href="index.html">Sign Out</a></li>
     </ul>
 </nav>
+
+
+
+
+
 <section>
-    <div class="image-container">
-        <div class="image-switch">
-            <img src="/static/images/services/temperature.jpg" alt="temp" width="300" height="300">
-            
-            <p class="image-name">Temperature Reader</p> 
-        </div>
-
-        <div class="image-switch">
-            <img src="/static/images/services/ceiling-fan.jpg" alt="Fan" width="300" height="300">
-            <p class="image-name">Door on</p> 
-               <form action="/door/on" method="post">
-                                <p class="image-name">
-                                    <button name="on"> 
-
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"> 
-                                            </span>
-                                        </label>
-
-                                </button></p> 
-                            </form>
-                       
-                            <p class="image-name">Door off</p> 
-                            <form action="/door/off" method="post">
-                                             <p class="image-name">
-                                                 <button name="on"> 
-             
-                                                     <label class="switch">
-                                                         <input type="checkbox">
-                                                         <span class="slider round"> 
-                                                         </span>
-                                                     </label>
-             
-                                             </button></p> 
-                                         </form>
-        </div>
-
-        <div class="image-switch">
-            <img src="/static/images/services/door.jpg" alt="door" width="300" height="300">
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <p class="image-name">Door Control</p> 
-        </div>
-
-       
-           
-                <div class="image-switch">
-                    <img src="/static/images/services/light.jpg" alt="light" width="300" height="300">
-                     <p class="image-name">Motion detector on</p> 
-                            <form action="/motionsensor/on" method="post">
-                                <p class="image-name">
-                                    <button name="on"> 
-
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"> 
-                                            </span>
-                                        </label>
-
-                                </button></p> 
-                            </form>
-                       
-                            <p class="image-name">Motion detector off</p> 
-
-                   
-                            <form action="/motionsensor/off" method="post">
-                                <p class="image-name">
-                                    <button name = "off"> 
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"> 
-
-                                    </span>
-                                </label>
-
-                                    </button></p> 
-                            </form>
-                       
-                    
-            
-        </div> 
-
-          <div class="image-switch">
-                    <img src="/static/images/services/light.jpg" alt="light" width="300" height="300">
-                     <p class="image-name">Light on</p> 
-                            <form action="/light/on" method="post">
-                                <p class="image-name">
-                                    <button name="on"> 
-
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"> 
-                                            </span>
-                                        </label>
-
-                                </button></p> 
-                            </form>
-                       
-                            <p class="image-name">Light off</p> 
-
-                   
-                            <form action="/light/off" method="post">
-                                <p class="image-name">
-                                    <button name = "off"> 
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"> 
-
-                                    </span>
-                                </label>
-
-                                    </button></p> 
-                            </form>
-                       
-                    
-            
-        </div> 
-        
-        
-
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
           
-             
+          <div class="col-sm-4">
+            <div class="card card_red text-center">
+              <div class="title">
+                  <img src="/static/images/services/door.jpg" alt="door" width="300" height="300">
+                <h2>Door Control</h2>
+              </div>
+              <form action="/door/on" method="post">
+             <button>Door Open</button> 
+             </form>
+             <form action="/door/off" method="post">
+            <button> Door Close </button>
+            </form>
+            </div>
+          </div>
+          
+
+
+             <div class="col-sm-4">
+            <div class="card card_red text-center">
+              <div class="title">
+                <img src="/static/images/services/ceiling-fan.jpg" alt="light" width="300" height="300">
+                <h2>Room Control</h2>
+              </div>
+              <form action="/motionsensor/on" method="post">             <button>Control on</button> 
+             </form>
+             <form action="/motionsensor/off" method="post">            <button> Control off </button>
+            </form>
+            </div>
+          </div>
+          
+
+          <div class="col-sm-4">
+            <div class="card card_red text-center">
+              <div class="title">
+                <img src="/static/images/services/light.jpg" alt="light" width="300" height="300">
+                <h2>Light Control</h2>
+              </div>
+              <form action="/light/on" method="post">
+                <button> Light on </button>
+
+            </form>
+            <form action="/light/off" method="post">
+                <button> Light off </button>
+            </form>
+            </div>
+          </div>
+          </div>
+  
+   
        
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+          
+         
+          </div>
+        </div>
+      </div>
+    
+  </section> 
 
 
 
