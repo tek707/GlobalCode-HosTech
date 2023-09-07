@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HOSTECH</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
+	<link href="style2.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+	<ul class="navbar">
+		<li><a href="homepage.html" class="col1">HOSTECH</a></li>
+		<li><a class="active" href="homepage.html">Home</a></li>
+		<li><a href="services.html">Services</a></li>
+		<li><a href="info.html">Info</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="index.html">Sign Out</a></li>
+	</ul>
+</nav>
+
+<section>
+	<div class="box">
+		<div class="wel" id="welcome-message"></div>
+		<div class="bb">
+            <span class="blink">
+                <button onclick="redirectToServices()">services</button>
+            </span>
+        </div>
+
+		<div class="single-box">
+			<div class="box-area"><img alt="" src="images/services/ceiling-fan.jpg"></div>
+			<div class="box-area custom">
+				<div class="overlay">
+					<div class="text-content">
+						<h2>Fan control</h2>
+						<h3>Our Fan Control system empowers students to intelligently control fan the room.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="single-box">
+			<div class="box-area"><img alt="" src="images/services/door.jpg"></div>
+			<div class="box-area custom">
+				<div class="overlay">
+					<div class="text-content">
+						<h2>Door Control</h2>
+						<h3>Our automated sliding door management feature provides secure access for authorized students of the room</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="single-box">
+			<div class="box-area"><img alt="" src="images/services/temperature.jpg"></div>
+			<div class="box-area custom">
+				<div class="overlay">
+					<div class="text-content">
+						<h2>Temperature Reader</h2>
+						<h3>Our system provides accurate temperature readings and alerts students of their room temperature.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="single-box">
+			<div class="box-area"><img alt="" src="images/services/light.jpg"></div>
+			<div class="box-area custom">
+				<div class="overlay">
+					<div class="text-content">
+						<h2>Light Control</h2>
+						<h3>Our Light Control system empowers students to intelligently control lighting throughout the room.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</section>
+
+<script>
+
+function redirectToServices() {
+        window.location.href = "services.html";
+    }
+
+
+
+	// Retrieve user information from local storage
+	const user = JSON.parse(localStorage.getItem("user"));
+	
+	if (user) {
+		// Display the welcome message if the user is logged in
+		const welcomeMessage = document.getElementById("welcome-message");
+		welcomeMessage.innerHTML = `<p><h3>Welcome: ${user.name}</h3></p>`;
+	}
+</script>
+
+<footer>
+	<p>
+		Created with by
+		<a target="_blank" href="#">TEAM RADIEN   HTU  </a>
+		<a target="_blank" href="#">(c) Global Code Camp 2023</a>.
+	</p>
+</footer>
+</body>
+</html>
