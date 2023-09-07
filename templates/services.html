@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>HOSTECH</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
-    <link href="style2.css" rel="stylesheet">
+    <link href="/static/css/style2.css" rel="stylesheet">
 </head>
 <body>
 <nav>
@@ -20,22 +20,44 @@
 <section>
     <div class="image-container">
         <div class="image-switch">
-            <img src="images/services/temperature.jpg" alt="temp" width="300" height="300">
+            <img src="/static/images/services/temperature.jpg" alt="temp" width="300" height="300">
             
             <p class="image-name">Temperature Reader</p> 
         </div>
 
         <div class="image-switch">
-            <img src="images/services/ceiling-fan.jpg" alt="Fan" width="300" height="300">
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <p class="image-name">Fan Control</p> 
+            <img src="/static/images/services/ceiling-fan.jpg" alt="Fan" width="300" height="300">
+            <p class="image-name">Door on</p> 
+               <form action="/door/on" method="post">
+                                <p class="image-name">
+                                    <button name="on"> 
+
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"> 
+                                            </span>
+                                        </label>
+
+                                </button></p> 
+                            </form>
+                       
+                            <p class="image-name">Door off</p> 
+                            <form action="/door/off" method="post">
+                                             <p class="image-name">
+                                                 <button name="on"> 
+             
+                                                     <label class="switch">
+                                                         <input type="checkbox">
+                                                         <span class="slider round"> 
+                                                         </span>
+                                                     </label>
+             
+                                             </button></p> 
+                                         </form>
         </div>
 
         <div class="image-switch">
-            <img src="images/services/door.jpg" alt="door" width="300" height="300">
+            <img src="/static/images/services/door.jpg" alt="door" width="300" height="300">
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
@@ -43,16 +65,138 @@
             <p class="image-name">Door Control</p> 
         </div>
 
-        <div class="image-switch">
-            <img src="images/services/light.jpg" alt="light" width="300" height="300">
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <p class="image-name">Light Control</p> 
-        </div>
+       
+           
+                <div class="image-switch">
+                    <img src="/static/images/services/light.jpg" alt="light" width="300" height="300">
+                     <p class="image-name">Motion detector on</p> 
+                            <form action="/motionsensor/on" method="post">
+                                <p class="image-name">
+                                    <button name="on"> 
+
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"> 
+                                            </span>
+                                        </label>
+
+                                </button></p> 
+                            </form>
+                       
+                            <p class="image-name">Motion detector off</p> 
+
+                   
+                            <form action="/motionsensor/off" method="post">
+                                <p class="image-name">
+                                    <button name = "off"> 
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"> 
+
+                                    </span>
+                                </label>
+
+                                    </button></p> 
+                            </form>
+                       
+                    
+            
+        </div> 
+
+          <div class="image-switch">
+                    <img src="/static/images/services/light.jpg" alt="light" width="300" height="300">
+                     <p class="image-name">Light on</p> 
+                            <form action="/light/on" method="post">
+                                <p class="image-name">
+                                    <button name="on"> 
+
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"> 
+                                            </span>
+                                        </label>
+
+                                </button></p> 
+                            </form>
+                       
+                            <p class="image-name">Light off</p> 
+
+                   
+                            <form action="/light/off" method="post">
+                                <p class="image-name">
+                                    <button name = "off"> 
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"> 
+
+                                    </span>
+                                </label>
+
+                                    </button></p> 
+                            </form>
+                       
+                    
+            
+        </div> 
+        
+        
+
+          
+             
+       
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <footer>
@@ -62,5 +206,12 @@
         <a target="_blank" href="#">(c) Global Code Camp 2023</a>.
     </p>
 </footer>
+
+
+
+
+
 </body>
 </html>
+
+   
